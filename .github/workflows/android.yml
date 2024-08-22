@@ -22,8 +22,10 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      working-directory: ./pixel-towers-master
     - name: Build with Gradle
-      run: ./gradlew  assembleDebug     #build 
+      run: ./gradlew  assembleDebug     #build
+      working-directory: ./pixel-towers-master
     - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
